@@ -16,6 +16,8 @@ MATRIX_LENGTH = 4
 spi = SPI(0, sck=Pin(2), mosi=Pin(3))
 cs = Pin(5, Pin.OUT)
 
+print("Setup SPI")
+
 display = max7219.Matrix8x8(spi, cs, MATRIX_LENGTH)
 display.brightness(0)
 
